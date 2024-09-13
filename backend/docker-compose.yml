@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: booking-app-db
+    volumes:
+      - booking-app-db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  booking-app-db-data:
+    driver: local

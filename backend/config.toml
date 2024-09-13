@@ -1,0 +1,17 @@
+[general]
+[general.app]
+name = "NBooking App"
+port = 3000
+enviroment = "development"
+
+[database]
+driver = "postgres"
+host= "localhost"
+username = "postgres"
+password = "postgres"
+name = "booking-app-db"
+port = 5432
+
+[log]
+level = "debug"
+database = "debug"

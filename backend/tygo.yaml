@@ -1,0 +1,26 @@
+packages:
+  - path: "backend/src/pkg/common"
+    output_path: "../frontend/src/types/generated/lib.ts"
+    indent: "  "
+    type_mappings:
+      uuid.UUID: "string /* uuid */"
+      time.Time: "string /* RFC3339 */"
+
+  - path: "backend/models"
+    output_path: "../frontend/src/types/generated/models.ts"
+    indent: "  "
+    type_mappings:
+      uuid.UUID: "string /* uuid */"
+      time.Time: "string /* RFC3339 */"
+
+  - path: "backend/src/api/controllers"
+    output_path: "../frontend/src/types/generated/auth-responses.ts"
+    indent: "  "
+    type_mappings:
+      uuid.UUID: "string /* uuid */"
+      time.Time: "string /* RFC3339 */"
+
+    exclude_files:
+      - "type.interfaces.go"
+      - "type.entity.go"
+      - "type.dto.go"
